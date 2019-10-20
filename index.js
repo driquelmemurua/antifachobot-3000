@@ -36,4 +36,11 @@ express()
       res.send("Error " + err);
     }
   })
+  .get('/twitter', async (req, res) => {
+    const results = await T.get('search/tweets', { q: 'banana since:2011-07-11', count: 10 }, function(err, data, response) {
+      console.log(data);
+      return data;
+    })
+    res.render('pages/twitter', results);
+  })
   .listen(PORT, () => console.log(`Listening on ${ PORT }`))
