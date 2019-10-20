@@ -1,39 +1,25 @@
-# node-js-getting-started
+# ANTIFACHOBOT-3000
 
-A barebones Node.js app using [Express 4](http://expressjs.com/).
+Bot destinado a ayudar a la gente que desea hacer valer su libertar de expresión a través de movilizaciones a través de Santiago de Chile.
 
-This application supports the [Getting Started with Node on Heroku](https://devcenter.heroku.com/articles/getting-started-with-nodejs) article - check it out.
+URL: https://antifachobot-3000.herokuapp.com/
+EMAIL: antifachobot3000@gmail.com
 
-## Running Locally
+## Como correr localmente
 
-Make sure you have [Node.js](http://nodejs.org/) and the [Heroku CLI](https://cli.heroku.com/) installed.
+Debes tener [Node.js](http://nodejs.org/) y [Heroku CLI](https://cli.heroku.com/) instalados.
 
 ```sh
-$ git clone https://github.com/heroku/node-js-getting-started.git # or clone your own fork
-$ cd node-js-getting-started
+$ git clone https://github.com/driquelmemurua/antifachobot-3000.git
+$ cd antifachobot-3000
 $ npm install
-$ npm start
 ```
+Crea un archivo llamado '.env' dentro del directorio principal y setea las variables de ambiente. Puedes guiarte a través del archivo '.env.example'.
 
-Your app should now be running on [localhost:5000](http://localhost:5000/).
-
-## Deploying to Heroku
-
+Corre la aplicación con el siguiente comando
 ```
-$ heroku create
-$ git push heroku master
-$ heroku open
+$ heroku local
 ```
-or
+La aplicación debería correr en [localhost:5000](http://localhost:5000/).
 
-[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
 
-## Documentation
-
-For more information about using Node.js on Heroku, see these Dev Center articles:
-
-- [Getting Started with Node.js on Heroku](https://devcenter.heroku.com/articles/getting-started-with-nodejs)
-- [Heroku Node.js Support](https://devcenter.heroku.com/articles/nodejs-support)
-- [Node.js on Heroku](https://devcenter.heroku.com/categories/nodejs)
-- [Best Practices for Node.js Development](https://devcenter.heroku.com/articles/node-best-practices)
-- [Using WebSockets on Heroku with Node.js](https://devcenter.heroku.com/articles/node-websockets)
