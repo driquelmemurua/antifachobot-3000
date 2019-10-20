@@ -2,6 +2,23 @@ const express = require('express')
 const path = require('path')
 const PORT = process.env.PORT || 5000
 
+var Twit = require('twit')
+ 
+var T = new Twit({
+  consumer_key:         process.env.CONSUMER_KEY,
+  consumer_secret:      process.env.CONSUMER_SECRET,
+  access_token:         process.env.ACCESS_TOKEN,
+  access_token_secret:  process.env.ACCESS_TOKEN_SECRET,
+  timeout_ms:           60*1000,  // optional HTTP request timeout to apply to all requests.
+  strictSSL:            true,     // optional - requires SSL certificates to be valid.
+})
+
+const { Pool } = require('pg');
+const pool = new Pool({
+  connectionString: process.env.DATABASE_URL,
+  ssl: true
+});
+
 express()
   .use(express.static(path.join(__dirname, 'public')))
   .set('views', path.join(__dirname, 'views'))
@@ -20,9 +37,3 @@ express()
     }
   })
   .listen(PORT, () => console.log(`Listening on ${ PORT }`))
-
-const { Pool } = require('pg');
-const pool = new Pool({
-  connectionString: process.env.DATABASE_URL,
-  ssl: true
-});
