@@ -13,7 +13,8 @@
   "dependencies": {
     "ejs": "^2.5.6",
     "express": "^4.15.2",
-    "pg": "^7.12.1"
+    "pg": "^7.12.1",
+    "twit": "^2.2.11"
   },
   "devDependencies": {
     "request": "^2.81.0",
