@@ -41,6 +41,6 @@ express()
       console.log(data);
       return data;
     })
-    res.render('pages/twitter', results);
+    res.render('pages/twitter', results.statuses);
   })
   .listen(PORT, () => console.log(`Listening on ${ PORT }`))
